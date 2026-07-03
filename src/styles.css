@@ -24,14 +24,8 @@ body {
   margin: 0;
   background: var(--surface);
   color: var(--ink);
-  font-family:
-    "Noto Sans JP",
-    Inter,
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    Meiryo,
-    system-ui,
-    sans-serif;
+  font-family: "Noto Sans JP", Inter, "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    Meiryo, system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: 0;
@@ -155,7 +149,12 @@ select {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, rgba(11, 24, 22, 0.88) 0%, rgba(12, 31, 29, 0.7) 44%, rgba(12, 31, 29, 0.18) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(11, 24, 22, 0.88) 0%,
+    rgba(12, 31, 29, 0.7) 44%,
+    rgba(12, 31, 29, 0.18) 100%
+  );
   content: "";
   pointer-events: none;
 }
@@ -179,7 +178,11 @@ select {
   inset: auto 0 0;
   z-index: 1;
   height: 34%;
-  background: linear-gradient(0deg, rgba(11, 24, 22, 0.68), rgba(11, 24, 22, 0));
+  background: linear-gradient(
+    0deg,
+    rgba(11, 24, 22, 0.68),
+    rgba(11, 24, 22, 0)
+  );
 }
 
 .hero-inner {
@@ -188,12 +191,40 @@ select {
   width: min(1120px, calc(100% - 48px));
   min-height: 680px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
   color: var(--paper);
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.24);
+}
+
+.hero-heading-copy {
+  min-width: 0;
+}
+
+.hero-face-picture {
+  display: block;
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+}
+
+.hero-face-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  align-self: center;
+  max-width: 760px;
 }
 
 .eyebrow,
@@ -237,7 +268,7 @@ h3 {
 
 .hero-copy {
   max-width: 720px;
-  margin: 22px 0 0;
+  margin: 24px 0 0;
   font-size: 1.12rem;
   line-height: 1.9;
 }
@@ -246,7 +277,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 34px;
+  margin: 34px 0 0;
 }
 
 .button {
@@ -318,6 +349,11 @@ h3 {
 .contact-layout,
 .personal-layout {
   grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+}
+
+.contact-layout {
+  grid-template-columns: minmax(260px, 0.82fr) minmax(360px, 1.18fr);
+  align-items: stretch;
 }
 
 .mission-layout,
@@ -580,9 +616,32 @@ h3 {
   color: var(--muted);
 }
 
+.contact-stack {
+  display: grid;
+  align-content: start;
+  gap: 28px;
+}
+
 .contact-actions {
   display: grid;
   gap: 12px;
+}
+
+.contact-photo-picture {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.contact-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .contact-link {
@@ -669,8 +728,22 @@ h3 {
     min-height: 610px;
   }
 
+  .hero-inner {
+    grid-template-columns: minmax(190px, 0.46fr) minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .hero-face-picture {
+    min-height: 610px;
+  }
+
   .hero::before {
-    background: linear-gradient(90deg, rgba(11, 24, 22, 0.9) 0%, rgba(12, 31, 29, 0.72) 62%, rgba(12, 31, 29, 0.32) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(11, 24, 22, 0.9) 0%,
+      rgba(12, 31, 29, 0.72) 62%,
+      rgba(12, 31, 29, 0.32) 100%
+    );
   }
 
   .two-column,
@@ -727,6 +800,21 @@ h3 {
   .hero-inner,
   .section-inner {
     width: calc(100% - 32px);
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 24px;
+    padding: 48px 0;
+  }
+
+  .hero-face-picture {
+    width: min(72vw, 280px);
+    min-height: min(84vw, 360px);
+    justify-self: start;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.26);
   }
 
   h1 {
