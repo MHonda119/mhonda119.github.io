@@ -17,7 +17,8 @@ This repository includes a React + Vite self-introduction website for GitHub Pag
 - Components / コンポーネント: `src/components/`
 - Content data / 掲載内容データ: `src/data/siteContent.js`
 - Styles / スタイル: `src/styles.css`
-- Visual asset / 画像アセット: `public/assets/sovereign-ai-cloud.png`
+- Source images / 元画像: `assets/source/`
+- Optimized public images / 配信用の最適化画像: `public/assets/hero/`
 - GitHub Pages workflow / GitHub Pagesデプロイ: `.github/workflows/deploy.yml`
 
 ### Local development / ローカル開発
@@ -27,11 +28,21 @@ npm install
 npm run dev
 ```
 
+Image optimization / 画像最適化:
+
+```bash
+npm run optimize-images
+```
+
 Production build / 本番ビルド:
 
 ```bash
 npm run build
 ```
+
+`npm run dev` and `npm run build` automatically generate optimized AVIF / WebP / JPEG assets from `assets/source/`.
+
+`npm run dev` と `npm run build` は、`assets/source/` からAVIF / WebP / JPEGの最適化画像を自動生成します。
 
 ### GitHub Pages GUI setup / GitHub PagesのGUI設定
 

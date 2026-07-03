@@ -4,7 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "predev": "npm run optimize-images",
     "dev": "vite",
+    "prebuild": "npm run optimize-images",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -14,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "6.0.3",
+    "sharp": "^0.35.3",
     "vite": "8.1.3"
   }
 }
