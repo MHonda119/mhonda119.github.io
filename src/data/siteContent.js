@@ -27,14 +27,15 @@ export const siteContent = {
       { href: "#activities", label: "活動" },
       { href: "#education", label: "教育" },
       { href: "#academic-research", label: "研究" },
+      { href: "#personal", label: "趣味" },
       { href: "#contact", label: "連絡先" },
     ],
     hero: {
-      eyebrow: "Sovereign AI / AI Agent / Domestic AI Cloud",
+      eyebrow: "Sovereign AI / AI Agent",
       title: "本多 誠之",
-      body: "ソフトバンク株式会社で、社内向けAIサービスやML / LLMを活用したPoC開発に取り組んできました。今後はソブリンAIおよび国産次世代AIクラウド基盤の開発に注力していきます。",
-      primaryAction: "注力領域を見る",
-      secondaryAction: "連絡する",
+      body: "大学院ではパターン認識を中心に農学・生命科学・化学工学といった複数のドメインでの応用研究に取り組みました。その後、ソフトバンク株式会社に入社し、ML / LLMを活用したAIサービスやPoC開発を行いました。今年度よりソブリンAIおよび国産次世代AIクラウド基盤の開発に注力していきます。",
+      primaryAction: "ソフトバンク注力領域を見る",
+      secondaryAction: "連絡先を見る",
     },
     profile: {
       kicker: "Profile",
@@ -43,7 +44,7 @@ export const siteContent = {
         ["氏名", "本多 誠之（Masayuki Honda）"],
         [
           "所属",
-          "ソフトバンク株式会社 次世代クラウド基盤開発本部 AIエージェント開発課",
+          "ソフトバンク株式会社 次世代クラウド基盤開発本部AI&データサイエンス統括部 AI基盤開発部 AIエージェント基盤開発課",
         ],
         ["兼務", "京都産業大学 講師・客員研究員"],
         ["学位", "博士（工学）"],
@@ -52,8 +53,8 @@ export const siteContent = {
     mission: {
       kicker: "New Mission",
       title: "ソブリンAI：国産次世代AIクラウド基盤の構築",
-      body: "これからのソフトバンクの注力領域として、ソブリンAI / ソブリンクラウドがあります。2026年6月30日、ソフトバンク・NEC・ホンダ・ソニーによる国産AI企業「Noetra」が、国家プロジェクト予算をもとに、基盤モデルおよび国産次世代AIクラウド基盤の構築に着手しました。",
-      articleLabel: "SBビットの解説記事を読む",
+      body: "これからのソフトバンクの注力領域として、ソブリンAI / ソブリンクラウドがあります。これは社会の中核をなすAIとその活動領域であるクラウド基盤を国内で構築することを目的としています。2026年6月30日、ソフトバンク・NEC・ホンダ・ソニーによる国産AI企業「Noetra」が、国家プロジェクト予算(NEDO)をもとに、基盤モデルおよび国産次世代AIクラウド基盤の構築に着手しました。事業会社であるソフトバンクは、NoetraやSBIntuisionsが構築する基盤モデルを活用し、個別企業や組織、あるいは社会課題解決ためにAIの社会実装を推進していきます。",
+      articleLabel: "ビジネス+ITの解説記事を読む",
       highlights: [
         { value: "3,873億円", label: "経済産業省より拠出" },
         { value: "Physical AI", label: "を見据えた基盤モデル開発" },
@@ -64,15 +65,15 @@ export const siteContent = {
       kicker: "Career",
       title: "キャリア・略歴",
       items: [
-        ["2023年", "ソフトバンク株式会社 入社 / 東京農工大学にて博士号取得"],
-        ["2023年〜", "AI戦略室 AIシステム開発部 NLPシステム開発課"],
-        ["2025年〜", "AIテクノロジー本部 AIソリューション開発課"],
         ["2026年〜", "次世代クラウド基盤開発本部 AIエージェント開発課"],
+        ["2025年〜", "AIテクノロジー本部 AIソリューション開発課"],
+        ["2023年〜", "AI戦略室 AIシステム開発部 NLPシステム開発課"],
+        ["2023年", "ソフトバンク株式会社 入社 / 東京農工大学にて博士号取得"],
       ],
     },
     work: {
       kicker: "Previous Work",
-      title: "これまでの業務・プロジェクト",
+      title: "これまでの参画プロジェクト",
       projectPreviewLabel: "詳細を表示",
       projectNoImageLabel: "画像なし",
       responsibilities: [
@@ -85,26 +86,26 @@ export const siteContent = {
           title: "SNS分析基盤",
           imageId: "prj-sns-analysis",
           imageComment:
-            "最近ではAIAgentによる自動的なクエリ探索機能により、分析業務の効率化や、LLMによるラベリング、Botやノイズ除外といった下流タスク処理を実現しています。",
-          body: "SNS（X）を分析する社内向けプラットフォームを提供。Sentiment分類、Bot・ノイズ検出、AI Agentによる分析・レポート出力を実現。",
+            "AIAgentによる自動的なクエリ探索機能による分析業務や、LLMによるラベリング、Botやノイズ除外といった下流タスク処理を実現しています。",
+          body: "SNS（X）を分析する社内向けプラットフォームを提供。顧客の感情分類、地理情報の抽出、ノイズ検出、AI Agentによる分析・レポート出力などの機能を実現。カスタマー対応部門が利用。",
         },
         {
-          title: "ChatGPT 社内知識連携システム",
+          title: "RAG基盤システム",
           imageId: "prj-intra-rag",
           imageComment:
-            "正確にはRAGデータのチャンキングシステムやOpenAI連携は社内別プロダクトが担当しており、バックグラウンドで走るDB構成や検索アルゴリズムの開発を担当しています。",
-          body: "社内ChatGPT Enterpriseへの外部知識連携を開発。部門・権限別の参照切り分けと、大規模データ向け検索を構築。",
+            "正確にはRAGデータのチャンキングシステムやOpenAI連携は社内別プロダクトが担当しており、バックグラウンドで走るDB構成管理や検索アルゴリズムの開発を担当しています。",
+          body: "社内ChatGPT Enterpriseへの外部知識連携、また商用RAGシステムのバックグラウンド処理を開発",
         },
         {
-          title: "株主総会 質問回答補助システム",
+          title: "株主総会での回答補助",
           imageId: "prj-kabuso",
           imageComment:
             "Webや当日会場にてリアルタイムで投函される株主からの質問の一次回答を生成したり、社長答弁に利用できる社内知識検索システムを開発しています。画像は総会舞台袖で控えるエンジニアです。",
           body: "社内横断知識を活用し、株主向け回答生成と会場リアルタイムでの情報レコメンドを支援。",
         },
         {
-          title: "キャリア店舗向け画像認識システム",
-          body: "店舗運営における注意喚起を支援する顔画像認識システムの保守運用を担当。",
+          title: "キャリア店舗向け画像認識",
+          body: "店舗運営における要注意顧客への注意喚起を支援する顔画像認識システムの保守運用を担当。",
         },
       ],
     },
@@ -129,23 +130,23 @@ export const siteContent = {
         {
           title: "京都産業大学での講義",
           imageId: "ksu-lecture-room",
-          body: "京都産業大学でシステム開発演習の講義を担当。",
+          body: "京都産業大学でシステム開発演習の講義を担当しています。CodingAgentが一般的になりつつある世界で、情報系の学生は何を学び、何を作るべきかを考えています。今のところ正解はないですね。",
         },
         {
           title: "東京農工大学での研究メンター",
           imageId: "tuat-ai-salon",
-          body: "東京農工大学では博士学生の研究メンターや講演を実施。",
+          body: "東京農工大学にて博士学生の研究メンターや講演をしています。\n農工大の未来価値創造特区(JST/SPRING・BOOST事業)のOBとして協力させて頂いています。皆さんクセが強いです。",
         },
       ],
     },
     research: {
       kicker: "Academic Research",
-      title: "大学院での研究",
+      title: "大学院での研究や参加プロジェクト",
       panelTitle: "研究テーマ",
       items: [
         [
           "情報工学",
-          "SSL手法を用いたロバストな手書き文字認識 / 歴史文書の自動採点",
+          "SSL手法を用いたロバストな手書き文字認識 / 歴史文書認識 / 自動採点",
         ],
         ["農業情報", "光合成モデリング / ドローンによる植生指数抽出"],
         ["生命工学", "ナノポアを用いた疾患早期診断支援"],
@@ -154,7 +155,7 @@ export const siteContent = {
     },
     personal: {
       kicker: "Interests",
-      title: "趣味・特技",
+      title: "趣味",
       closeLabel: "閉じる",
       items: [
         {
@@ -175,14 +176,14 @@ export const siteContent = {
         {
           title: "お酒",
           imageId: "interest-sake",
-          comment: "酒はいいぞ",
+          comment: "お酒はいいぞ",
         },
       ],
     },
     contact: {
       kicker: "Contact",
       title: "連絡先",
-      body: "公開サイトではメール連絡先のみを掲載しています。",
+      body: "公開サイトではメール連絡先のみを掲載しています。\nお気軽にご連絡ください。",
       businessLabel: "会社メール",
       personalLabel: "個人メール",
     },
@@ -197,14 +198,15 @@ export const siteContent = {
       { href: "#activities", label: "Activities" },
       { href: "#education", label: "Education" },
       { href: "#academic-research", label: "Research" },
+      { href: "#personal", label: "Interests" },
       { href: "#contact", label: "Contact" },
     ],
     hero: {
-      eyebrow: "Sovereign AI / AI Agent / Domestic AI Cloud",
+      eyebrow: "Sovereign AI / AI Agent",
       title: "Masayuki Honda",
-      body: "I have worked on internal AI services and proof-of-concept development using ML / LLMs at SoftBank Corp. Going forward, I will focus on sovereign AI and the development of a next-generation domestic AI cloud platform.",
-      primaryAction: "Focus Area",
-      secondaryAction: "Contact",
+      body: "In graduate school, I worked on applied research centered on pattern recognition across multiple domains, including agriculture, life sciences, and chemical engineering. I then joined SoftBank Corp., where I developed AI services and proof-of-concepts using ML / LLMs. Starting this fiscal year, I will focus on sovereign AI and the development of a next-generation domestic AI cloud platform.",
+      primaryAction: "See SoftBank Focus Area",
+      secondaryAction: "View Contact",
     },
     profile: {
       kicker: "Profile",
@@ -213,23 +215,20 @@ export const siteContent = {
         ["Name", "Masayuki Honda"],
         [
           "Organization",
-          "SoftBank Corp., AI Agent Development Section, Next-Generation Cloud Infrastructure Development Division",
+          "SoftBank Corp., AI Agent Platform Development Section, AI Platform Development Department, AI & Data Science Division, Next-Generation Cloud Infrastructure Development Unit",
         ],
         [
           "Concurrent Role",
           "Lecturer and Visiting Researcher, Kyoto Sangyo University",
         ],
-        [
-          "Degree",
-          "Doctoral degree, Tokyo University of Agriculture and Technology",
-        ],
+        ["Degree", "Ph.D. in Engineering"],
       ],
     },
     mission: {
       kicker: "New Mission",
       title:
         "Sovereign AI: Building a Next-Generation Domestic AI Cloud Platform",
-      body: "Sovereign AI and sovereign cloud are among SoftBank's key focus areas going forward. On June 30, 2026, Noetra, a domestic AI company formed by SoftBank, NEC, Honda, and Sony, began building foundation models and a next-generation domestic AI cloud platform based on a national project budget.",
+      body: "Sovereign AI and sovereign cloud are among SoftBank's key focus areas going forward. The goal is to build AI, which will form part of society's core infrastructure, and the cloud platform where it operates, within Japan. On June 30, 2026, Noetra, a domestic AI company formed by SoftBank, NEC, Honda, and Sony, began building foundation models and a next-generation domestic AI cloud platform based on a national project budget from NEDO. As an operating company, SoftBank will use foundation models developed by Noetra and SB Intuitions to promote the social implementation of AI for individual companies, organizations, and the resolution of social issues.",
       articleLabel: "Read the SB Bit article",
       highlights: [
         { value: "387.3B JPY", label: "in funding from METI" },
@@ -245,23 +244,23 @@ export const siteContent = {
       title: "Career",
       items: [
         [
-          "2023",
-          "Joined SoftBank Corp. / Received doctoral degree from Tokyo University of Agriculture and Technology",
+          "2026-",
+          "AI Agent Development Section, Next-Generation Cloud Infrastructure Development Division",
         ],
+        ["2025-", "AI Solution Development Section, AI Technology Division"],
         [
           "2023-",
           "NLP System Development Section, AI System Development Department, AI Strategy Office",
         ],
-        ["2025-", "AI Solution Development Section, AI Technology Division"],
         [
-          "2026-",
-          "AI Agent Development Section, Next-Generation Cloud Infrastructure Development Division",
+          "2023",
+          "Joined SoftBank Corp. / Received doctoral degree from Tokyo University of Agriculture and Technology",
         ],
       ],
     },
     work: {
       kicker: "Previous Work",
-      title: "Previous Work and Projects",
+      title: "Projects I Have Contributed To",
       projectPreviewLabel: "View details",
       projectNoImageLabel: "No image",
       responsibilities: [
@@ -274,15 +273,15 @@ export const siteContent = {
           title: "SNS Analytics Platform",
           imageId: "prj-sns-analysis",
           imageComment:
-            "Recently, AI Agent-based automatic query exploration has improved analysis workflows and enables downstream tasks such as LLM labeling, bot detection, and noise filtering.",
-          body: "Provided an internal platform for analyzing SNS data, mainly X, with sentiment classification, bot detection, noise detection, and AI Agent reporting.",
+            "AI Agent-based automatic query exploration supports analysis workflows, while LLM labeling, bot filtering, and noise removal handle downstream task processing.",
+          body: "Provided an internal platform for analyzing SNS data, mainly X. It supports customer sentiment classification, geographic information extraction, noise detection, and AI Agent-based analysis and report generation. It is used by customer support departments.",
         },
         {
-          title: "ChatGPT Internal Knowledge Integration System",
+          title: "RAG Platform System",
           imageId: "prj-intra-rag",
           imageComment:
             "More precisely, another internal product handles RAG data chunking and OpenAI integration; my work focuses on the background database architecture and search algorithms.",
-          body: "Connected internal-domain external knowledge to ChatGPT Enterprise with permission-aware references and large-scale vector and hybrid search.",
+          body: "Developed external knowledge integration for the internal ChatGPT Enterprise environment, as well as background processing for a commercial RAG system.",
         },
         {
           title: "Shareholders' Meeting Q&A Support System",
@@ -293,7 +292,7 @@ export const siteContent = {
         },
         {
           title: "Image Recognition System for Carrier Stores",
-          body: "Maintained and operated a face image recognition system that supports in-store alerts and operations.",
+          body: "Maintained and operated a face image recognition system that supports alerts for high-risk customers in store operations.",
         },
       ],
     },
@@ -330,24 +329,24 @@ export const siteContent = {
         {
           title: "Lectures at Kyoto Sangyo University",
           imageId: "ksu-lecture-room",
-          body: "Taught system development exercises at Kyoto Sangyo University.",
+          body: "I teach system development exercises at Kyoto Sangyo University. In a world where coding agents are becoming commonplace, I think about what computer science students should learn and what they should build. There is no clear answer yet.",
         },
         {
           title:
             "Research Mentoring at Tokyo University of Agriculture and Technology",
           imageId: "tuat-ai-salon",
-          body: "Mentored doctoral students and gave occasional research talks at Tokyo University of Agriculture and Technology.",
+          body: "I mentor doctoral students and give research talks at Tokyo University of Agriculture and Technology. I also support the Future Value Creation District (JST / SPRING and BOOST programs) as an alumnus of the university and its predecessor organization. Everyone there has a strong personality.",
         },
       ],
     },
     research: {
       kicker: "Academic Research",
-      title: "Graduate Research",
+      title: "Graduate Research and Participating Projects",
       panelTitle: "Research Topics",
       items: [
         [
           "Computer Science",
-          "Robust handwritten character recognition using SSL methods / Automated grading of historical documents",
+          "Robust handwritten character recognition using SSL methods / Historical document recognition / Automated grading",
         ],
         [
           "Agricultural Informatics",
@@ -362,7 +361,7 @@ export const siteContent = {
     },
     personal: {
       kicker: "Interests",
-      title: "Hobbies and Interests",
+      title: "Hobbies",
       closeLabel: "Close",
       items: [
         {
@@ -390,7 +389,7 @@ export const siteContent = {
     contact: {
       kicker: "Contact",
       title: "Contact",
-      body: "Only email contacts are listed on this public website.",
+      body: "Only email contacts are listed on this public website.\nPlease feel free to reach out.",
       businessLabel: "Business email",
       personalLabel: "Personal email",
     },

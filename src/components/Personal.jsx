@@ -51,6 +51,7 @@ export function Personal({ content }) {
   return (
     <section
       className="section-band personal-band"
+      id="personal"
       aria-labelledby="personal-title"
     >
       <div className="section-inner personal-layout">
