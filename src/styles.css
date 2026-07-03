@@ -1065,7 +1065,8 @@ h3 {
 
   .hero-face-picture {
     width: 100vw;
-    min-height: min(112vw, 430px);
+    height: min(74vw, 288px);
+    min-height: 0;
     justify-self: center;
     margin-inline: calc(50% - 50vw);
     border-right: 0;
