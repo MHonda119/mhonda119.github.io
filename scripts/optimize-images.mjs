@@ -1,4 +1,4 @@
-import { mkdir, rm } from "node:fs/promises";
+import { access, mkdir, rm } from "node:fs/promises";
 import path from "node:path";
 import sharp from "sharp";
 import { photos } from "../src/data/photoManifest.js";
@@ -23,6 +23,37 @@ function normalizeName(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
+}
+
+async function pathExists(filePath) {
+  try {
+    await access(filePath);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function photoOutputPaths(photo) {
+  const photoId = normalizeName(photo.id);
+
+  return photo.variants.flatMap((variant) => {
+    const preset = photoVariantPresets[variant];
+
+    if (!preset) {
+      throw new Error(`Unknown photo variant: ${variant}`);
+    }
+
+    return preset.widths.flatMap((width) => {
+      const basePath = path.join(
+        photoOutputDir,
+        photoId,
+        `${normalizeName(variant)}-${width}`
+      );
+
+      return ["avif", "webp", "jpg"].map((format) => `${basePath}.${format}`);
+    });
+  });
 }
 
 function resizeOptions(preset, width, position) {
@@ -150,13 +181,35 @@ async function writeHeroImages() {
 }
 
 async function writePhotoImages() {
-  await rm(photoOutputDir, { recursive: true, force: true });
   await mkdir(photoOutputDir, { recursive: true });
 
   await Promise.all(
     photos.map(async (photo) => {
       const photoId = normalizeName(photo.id);
       const outputDir = path.join(photoOutputDir, photoId);
+
+      if (!(await pathExists(photo.source))) {
+        const missingOutputs = [];
+
+        for (const outputPath of photoOutputPaths(photo)) {
+          if (!(await pathExists(outputPath))) {
+            missingOutputs.push(outputPath);
+          }
+        }
+
+        if (missingOutputs.length > 0) {
+          throw new Error(
+            `Input file is missing: ${photo.source}. Generated outputs are also missing, for example: ${missingOutputs[0]}`
+          );
+        }
+
+        console.warn(
+          `Skipping ${photo.id}: source file is missing, using committed generated assets.`
+        );
+        return;
+      }
+
+      await rm(outputDir, { recursive: true, force: true });
       await mkdir(outputDir, { recursive: true });
 
       const source = sharp(photo.source).rotate().toColorspace("srgb");
