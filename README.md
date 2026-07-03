@@ -127,7 +127,7 @@ SoftBank Corp. is looking for engineers and researchers on the infrastructure an
 - Generative AI
 - LLM
 - AI Agent
-- RAG / Search
+- RAG
 - Multimodal AI
 - Sovereign AI / Sovereign Cloud
 

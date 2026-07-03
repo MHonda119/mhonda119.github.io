@@ -18,7 +18,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: 16px;
 }
 
 body {
@@ -320,7 +320,6 @@ h3 {
 }
 
 .section-band {
-  scroll-margin-top: 96px;
   padding: 88px 0;
 }
 
@@ -929,11 +928,7 @@ h3 {
 
 @media (max-width: 1020px) {
   html {
-    scroll-padding-top: 132px;
-  }
-
-  .section-band {
-    scroll-margin-top: 132px;
+    scroll-padding-top: 76px;
   }
 
   .site-header {
@@ -1016,11 +1011,7 @@ h3 {
 
 @media (max-width: 620px) {
   html {
-    scroll-padding-top: 124px;
-  }
-
-  .section-band {
-    scroll-margin-top: 124px;
+    scroll-padding-top: 60px;
   }
 
   .site-header {

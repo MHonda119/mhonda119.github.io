@@ -10,7 +10,7 @@ export const commonContent = {
     "Generative AI",
     "LLM",
     "AI Agent",
-    "RAG / Search",
+    "RAG",
     "Multimodal AI",
     "Sovereign AI",
   ],
@@ -31,7 +31,7 @@ export const siteContent = {
       { href: "#contact", label: "連絡先" },
     ],
     hero: {
-      eyebrow: "Sovereign AI / AI Agent",
+      eyebrow: "AI Engineer / Data Scientist",
       title: "本多 誠之",
       body: "大学院では情報工学・パターン認識分野を中心に、農学・生命科学・化学工学など複数のドメインにおける応用研究に従事。その後、ソフトバンク株式会社に入社し、ML／LLMを活用したAIサービスやPoC開発に携わる。現在は、ソブリンAIおよび国産次世代AIクラウド基盤の開発へ。",
       primaryAction: "ソフトバンク注力領域を見る",
@@ -202,7 +202,7 @@ export const siteContent = {
       { href: "#contact", label: "Contact" },
     ],
     hero: {
-      eyebrow: "Sovereign AI / AI Agent",
+      eyebrow: "AI Engineer / Data Scientist",
       title: "Masayuki Honda",
       body: "In graduate school, I worked on applied research centered on pattern recognition across multiple domains, including agriculture, life sciences, and chemical engineering. I then joined SoftBank Corp., where I developed AI services and proof-of-concepts using ML / LLMs. Starting this fiscal year, I will focus on sovereign AI and the development of a next-generation domestic AI cloud platform.",
       primaryAction: "See SoftBank Focus Area",
